@@ -44,6 +44,9 @@ export class MessageDBRepository implements IMessageRepository {
                 updatedAt: true,
                 author: true,
             },
+            orderBy: {
+                createdAt: "desc",
+            },
             take: args.take || 10,
             skip: args.skip,
         });
