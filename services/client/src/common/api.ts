@@ -5,7 +5,7 @@ export async function getMessages(
     take: number
 ): Promise<Message[]> {
     const response = await fetch(
-        `http://localhost:3000/api/messages?skip=${skip}&take=${take}`
+        `http://localhost:3009/api/messages?skip=${skip}&take=${take}`
     );
     const data = await response.json();
     return data.data;
@@ -16,7 +16,7 @@ export async function createMessage(message: {
     author: string;
     content: string;
 }): Promise<SuccessResponse> {
-    const response = await fetch("http://localhost:3000/api/messages", {
+    const response = await fetch("http://localhost:3009/api/messages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(message),
