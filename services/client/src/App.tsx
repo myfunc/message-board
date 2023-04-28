@@ -7,6 +7,7 @@ const App: React.FC = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/:page?" element={<Home />} />
                 <Route path="/create-message" element={<CreateMessage />} />
             </Routes>
         </Router>

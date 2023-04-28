@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getMessages } from "../../common/api";
 import { Message } from "../../common/schema";
 import "./Home.scss";
 
 const Home: React.FC = () => {
     const [messages, setMessages] = useState([] as Message[]);
-    const [page, setPage] = useState(0);
+    const location = useLocation();
+    const page = Number(new URLSearchParams(location.search).get("page")) || 0;
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,6 +17,10 @@ const Home: React.FC = () => {
         };
         fetchData();
     }, [page]);
+
+    const handlePageChange = (newPage: number) => {
+        navigate(`?page=${newPage}`);
+    };
 
     return (
         <div className="home">
@@ -39,14 +45,14 @@ const Home: React.FC = () => {
             <div className="navigation">
                 <button
                     className="navigation-button"
-                    disabled={page === 0}
-                    onClick={() => setPage(page - 1)}
+                    onClick={() => handlePageChange(Number(page) - 1)}
+                    disabled={Number(page) === 0}
                 >
                     Previous
                 </button>
                 <button
                     className="navigation-button"
-                    onClick={() => setPage(page + 1)}
+                    onClick={() => handlePageChange(Number(page) + 1)}
                 >
                     Next
                 </button>
