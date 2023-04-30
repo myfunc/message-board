@@ -4,6 +4,10 @@ This is a simple web application for creating posts. It is built using React for
 
 Demo: [https://messages.myfunc.io/](https://messages.myfunc.io/)
 
+![Home](images/home.png)
+
+![Create](images/create.png)
+
 ## Getting Started
 
 To run the application locally, follow these steps:
