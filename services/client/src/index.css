@@ -11,3 +11,15 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+textarea,
+button,
+input {
+    -webkit-appearance: none; /* Удаление стилей по умолчанию для iOS */
+    -moz-appearance: none; /* Удаление стилей по умолчанию для Firefox */
+    appearance: none; /* Удаление стилей по умолчанию */
+    background-color: transparent; /* Устанавливаем прозрачный фон */
+    border: none; /* Удаляем рамку */
+    color: black;
+    background-color: transparent;
+}
