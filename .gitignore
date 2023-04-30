@@ -63,11 +63,6 @@ typings/
 .yarn
 yarn.lock
 
-# dotenv environment variables file
-.env
-.env.*
-!.env.example
-
 # gatsby files
 .cache/
 public/
