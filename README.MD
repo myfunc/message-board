@@ -2,7 +2,7 @@
 
 This is a simple web application for creating posts. It is built using React for the frontend, Node.js with Next.js for the backend, and Prisma as an ORM. The database used is MySQL, but it can be replaced with any other database at this stage of development. Deployment is currently set up for local use only. Production deployment is not configured.
 
-Demo: [http://messages.myfunc.io/](https://messages.myfunc.io/)
+Demo: [http://messages.myfunc.io/](http://messages.myfunc.io/)
 
 ![Home](images/home.png)
 
