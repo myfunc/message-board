@@ -14,7 +14,7 @@ To run the application locally, follow these steps:
 
 1. Navigate to the `services` directory:
 
-2. Use the `Makefile` to start the services:
+2. Use the `Makefile` to start the services. Enter command `make up`:
 
 3. The application will be accessible at `http://localhost:3000`.
 
